@@ -1,0 +1,86 @@
+*,*::after, *::before{
+    box-sizing: border-box;
+
+}
+
+.outter-wrapper {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    background-color: black;
+
+}
+
+.outter {
+    position: relative;
+    animation: flicker 3ms ease-in-out infinite;
+    
+}
+
+.wrapper{
+    position: absolute;
+    bottom: 0;
+    border-radius: 50% 0 50% 50%;
+    transform: rotate(-45deg);
+    
+    
+}
+
+.wrapper-red{
+    width: 80px;
+    height: 80px;
+    background-color: orangered;
+    left: -20px;
+    box-shadow: 0 0 10px 13px orangered;
+
+}
+
+.wrapper-orange{
+    width: 60px;
+    height: 60px;
+    background-color: orange;
+    left: -13px;
+    box-shadow: 0 0 10px 9px orange;
+
+}
+
+.wrapper-gold{
+    width: 45px;
+    height: 45px;
+    background-color: gold;
+    left: -6px;
+    box-shadow: 0 0 9px 4px gold;
+}
+
+.wrapper-white{
+    width:35px;
+    height: 35px;
+    background-color: white;
+    left: -4px;
+    box-shadow: 0 0 7px 5px white;
+
+}
+
+.black {
+    border-radius: 50%;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    box-shadow: 0 0 15px 10px black;
+    bottom: -52px;
+    left: -2px;
+}
+
+@keyframes flicker{
+    0% {transform: rotate(-1deg)}
+    20% {transform: rotate(2deg) scaleY(1.05)}
+    40% {transform: rotate(-1deg)}
+    60% {transform: rotate(1deg)}
+    80% {transform: rotate(-1deg) scaleY(0.95)}
+    100% {transform: rotate(1deg)}
+
+}
